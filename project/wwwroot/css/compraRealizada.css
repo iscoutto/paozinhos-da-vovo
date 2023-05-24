@@ -1,0 +1,23 @@
+﻿.msg-compra{
+    background-color: #ffffff96;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.imagem-agradecimento img{
+    width: 20vh;
+}
+
+.acoes img{
+    margin: 10px;
+    width: 8vh;
+    display:flex;
+    align-items:flex-start;
+}
+.acoes img:hover{
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+.logo-one{
+    visibility:hidden;
+}

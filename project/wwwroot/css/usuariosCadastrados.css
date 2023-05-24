@@ -1,0 +1,115 @@
+﻿main .usuariosCadastrados {
+    background-color: #fcf7f7b1;
+    border-radius: 10px;
+    padding: 10px;
+    width: 130vh;
+    margin: auto;
+}
+
+.usuariosCadastrados h1 {
+    font-size: 4vh;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tabela-users {
+    margin-top: 10px;
+    min-width: 128vh;
+    table-layout: fixed;
+    text-align: center;
+}
+
+    .tabela-users th {
+        padding-bottom: 1.5vh;
+    }
+
+    .tabela-users tr {
+        border-bottom: 1px solid #00000028;
+    }
+
+.content-users {
+    font-size: 2.2vh;
+}
+
+    .content-users:hover {
+        background-color: #00c1ff;
+        box-shadow: #00000028 5px 5px 5px 5px;
+        font-weight: bold;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .content-users img {
+        width: 3vh;
+        padding: 0.01vh;
+    }
+
+    .content-users td {
+        padding: 3px;
+    }
+
+.content-acion {
+    font-size: 3vh;
+}
+
+.logo-one img {
+    visibility: hidden;
+}
+
+.btn-edit {
+    background-color: #bebebe;
+    border-radius: 5px;
+    padding: 1px;
+}
+
+    .btn-edit:hover, .content-users img:hover {
+        transform: scale(1.4);
+        transition: all 0.2s ease-in-out;
+        padding: 0.4vh;
+    }
+
+.btn-trash {
+    background-color: #ff1212;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+    .btn-trash:hover, .content-users img:hover {
+        transform: scale(1.8);
+        transition: all 0.2s ease-in-out;
+        padding: 0.4vh;
+    }
+
+.btn-newUser {
+    width: 150px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #00c1ff;
+    padding-bottom: 10px;
+    color: #ffffff;
+    box-shadow: 11px;
+    font-weight: bold;
+}
+
+    .btn-newUser:hover {
+        text-decoration: none;
+        color: black;
+        border: 3px solid black;
+        transition: all 0.1s ease-in-out;
+    }
+
+    .btn-newUser img {
+        width: 30px;
+    }
+
+.btn-back img {
+    width: 50px;
+    border-radius: 10px;
+    padding: 2px;
+    margin-bottom: 2vh;
+}
+
+    .btn-back img:hover {
+    transform: scale(1.1);
+    transition: all 0.1s ease-in-out;
+    }
+

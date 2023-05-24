@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "f11e7ea8-9aa4-4e8d-b598-c3178fdff668",
+		"name": "Paozinhos da Vovo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27452021"
+	},
+	"item": [
+		{
+			"name": "1. Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{url}}:4041/iot/about",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"port": "4041",
+					"path": [
+						"iot",
+						"about"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Provisioning a Service Group for MQTT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "fiware-service",
+						"type": "text",
+						"value": "helixiot"
+					},
+					{
+						"key": "fiware-servicepath",
+						"type": "text",
+						"value": "/"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"services\": [\n   {\n     \"apikey\":      \"iot\",\n     \"cbroker\":     \"http://{{url}}:1026\",\n     \"entity_type\": \"Thing\",\n     \"resource\":    \"\"\n   }\n ]\n}"
+				},
+				"url": {
+					"raw": "http://{{url}}:4041/iot/services",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"port": "4041",
+					"path": [
+						"iot",
+						"services"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. List all Devices Provisioned",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "fiware-service",
+						"type": "text",
+						"value": "helixiot"
+					},
+					{
+						"key": "fiware-servicepath",
+						"type": "text",
+						"value": "/"
+					}
+				],
+				"url": {
+					"raw": "http://{{url}}:4041/iot/devices",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"port": "4041",
+					"path": [
+						"iot",
+						"devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Provisioning a object",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "fiware-service",
+						"type": "text",
+						"value": "helixiot"
+					},
+					{
+						"key": "fiware-servicepath",
+						"type": "text",
+						"value": "/"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"devices\": [\n        {\n            \"device_id\": \"espcam001\",\n            \"entity_name\": \"urn:ngsi-ld:Espcam:001\",\n            \"entity_type\": \"Espcam\",\n            \"protocol\": \"PDI-IoTA-UltraLight\",\n            \"transport\": \"MQTT\",\n            \"commands\": [\n                {\n                    \"name\": \"ok\",\n                    \"type\": \"command\"\n                },\n                {\n                    \"name\": \"nok\",\n                    \"type\": \"command\"\n                }\n            ],\n            \"attributes\": [\n                {\n                    \"object_id\": \"s\",\n                    \"name\": \"qr_code\",\n                    \"type\": \"Text\"\n                }\n            ]\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://{{url}}:4041/iot/devices",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"port": "4041",
+					"path": [
+						"iot",
+						"devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Registering Commands",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "fiware-service",
+						"type": "text",
+						"value": "helixiot"
+					},
+					{
+						"key": "fiware-servicepath",
+						"type": "text",
+						"value": "/"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"description\": \"Espcam Commands\",\n  \"dataProvided\": {\n    \"entities\": [\n      {\n        \"id\": \"urn:ngsi-ld:Espcam:001\", \"type\": \"Espcam\"\n      }\n    ],\n    \"attrs\": [\"ok\", \"nok\"]\n  },\n  \"provider\": {\n    \"http\": {\"url\": \"http://{{url}}:4041\"},\n    \"legacyForwarding\": true\n  }\n}"
+				},
+				"url": {
+					"raw": "http://{{url}}:1026/v2/registrations",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"port": "1026",
+					"path": [
+						"v2",
+						"registrations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. Switching on the Espcam",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "fiware-service",
+						"type": "text",
+						"value": "helixiot"
+					},
+					{
+						"key": "fiware-servicepath",
+						"type": "text",
+						"value": "/"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ok\": {\n        \"type\": \"command\",\n        \"value\": \"\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://{{url}}:1026/v2/entities/urn:ngsi-ld:Espcam:001/attrs",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"port": "1026",
+					"path": [
+						"v2",
+						"entities",
+						"urn:ngsi-ld:Espcam:001",
+						"attrs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Result of  Espcam",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "fiware-service",
+						"value": "helixiot",
+						"type": "text"
+					},
+					{
+						"key": "fiware-servicepath",
+						"value": "/",
+						"type": "text"
+					},
+					{
+						"key": "accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{url}}:1026/v2/entities/urn:ngsi-ld:Espcam:001/attrs/qr_code",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"port": "1026",
+					"path": [
+						"v2",
+						"entities",
+						"urn:ngsi-ld:Espcam:001",
+						"attrs",
+						"qr_code"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

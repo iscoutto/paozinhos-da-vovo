@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="~/css/InicialLogado.css" />
+    <link href="~/css/site.css" rel="stylesheet" />
+}
+<main>
+
+    <div class="welcome">
+
+        <h1>Bem vindo Administrador(a)</h1>
+
+    </div>
+
+
+
+    <article class="content-adm">
+
+
+
+        <h1>Operações Gerenciáveis</h1>
+
+        <div class="acoes">
+
+            <a href="/CadastroUsuarios/UsuariosCadastrados?tipo=0" class="addUser"></a>
+            <a href="/CadastroUsuarios/UsuariosCadastrados?tipo=1" class="addAdm"></a>
+
+        </div>
+
+        <div class="acoes">
+
+            <a href="/Produto/ProdutosCadastrados" class="addProduct"></a>
+            <a href="/Categoria/CategoriasCadastradas" class="addCategory"></a>
+
+        </div>
+
+        <div class="acoes">
+            <a href="@Url.Action("LogOff","Logado")" class="logout"></a>
+        </div>
+
+    </article>
+
+</main>

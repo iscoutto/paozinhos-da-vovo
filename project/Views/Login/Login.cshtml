@@ -1,0 +1,112 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="~/css/login.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/cadastro.css" />
+    <link href="~/css/site.css" rel="stylesheet" />
+}
+<body>
+
+    <div class="content-login-all">
+
+        <div class="container-login" id="cliente">
+            <div class="forms-container-login">
+
+                <div class="signin-signup">
+                    <form action="FazLogin" method="post" class="sign-in-form">
+                        <h2 class="title">Login Cliente</h2>
+
+                        <label class="msg-erro">@ViewBag.Erro</label>
+
+                        <div class="input-field">
+                            
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="usuario" placeholder="Username" required />
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" name="senha" placeholder="Senha" required />
+                        </div>
+                        <input type="submit" value="Login" class="btn solid" />
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="container-login-adm" id="adm">
+            <div class="forms-container-login">
+
+
+                <form action="Save" method="post" class="form-cadastro">
+
+                    <input type="hidden" name="Operacao" value="I" />
+
+                    <div class="form-group">
+                        <label for="nome">Nome*</label>
+                        <input type="text" id="nome" name="nome">
+                    </div>
+
+                        <div class="form-group">
+                            <label for="tipoUsuario">Tipo de Usuário*</label>
+                            <input type="text" name="tipoUsuario" class="form-control disabled" value="Cliente" readonly>
+                        </div>
+                    
+
+                    <div class="form-group">
+                        <label for="cpf">CPF*</label>
+                        <input type="number" id="cpf" name="cpf" placeholder="CPF" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail*</label>
+                        <input type="email" id="email" name="email" placeholder="E-mail"  required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Senha*</label>
+                        <input type="password" id="senha" name="senha" placeholder="Senha" required>
+                    </div>
+                    <br />
+
+                    <button type="submit" class="btn-create">Salvar</button>
+                </form>
+
+            </div>
+
+
+        </div>
+
+        <div class="div-button-cliente">
+
+            <h6>Login / Criar</h6>
+
+            <div class="switch-button">
+                <label class="switch">
+                    <input type="checkbox" onclick="admClient()">
+                    <span class="slider round"></span>
+                </label>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+    function admClient() {
+
+        var divadm = document.getElementById("adm");
+        var divcliente = document.getElementById("cliente");
+
+        divcliente.classList.toggle("oculto")
+        divadm.classList.toggle("expandido");
+
+    }
+
+</script>

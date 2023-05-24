@@ -1,0 +1,199 @@
+﻿.logo-one {
+    visibility: hidden;
+}
+
+body {
+    background-image: url(../images/fundo_home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+a {
+    color: black;
+}
+
+    a:hover {
+        color: black;
+    }
+
+h1 {
+    font-family: 'Brush Script MT';
+    font-size: 8vh;
+}
+
+h3 {
+    font-family: 'Brush Script MT';
+    font-size: 5vh;
+    text-align: center;
+}
+
+.welcome {
+    width: 100%;
+    text-align: center;
+    padding: 5vh;
+    background-color: #fa9751;
+    border-radius: 10px;
+    margin-bottom: 1vh;
+}
+
+.acoes {
+    background-color: #ffffffa7;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Brush Script MT';
+    font-size: 4vh;
+    backdrop-filter:blur(10PX);
+}
+
+    .acoes div {
+        padding: 1vh;
+        border-radius: 10px;
+    }
+
+        .acoes div:hover {
+            background-color: #ff6a00;
+            transform: scale(1.1);
+            transition: all 0.2s ease-in-out;
+        }
+
+.img-sobre img, .img-contato img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 1.5vh #333;
+}
+
+#sobre.exibir, #contato.exibir {
+    background-color: #b5b5b5;
+    max-height: 100%;
+    width: 100%;
+    margin-top: 1vh;
+    color: black;
+    border-radius: 10px;
+    text-align: justify;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+#sobre, #contato {
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.4s ease-in-out;
+    width: 0;
+}
+
+.sobre p, .contato p {
+    padding: 1vh;
+    font-family: 'Lucida Calligraphy';
+    font-size: 2VH;
+}
+
+.sobre, .contato {
+    margin-top: 1vh;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 0 0.5vh #333;
+}
+
+#apresentation {
+    background-color: #ffffffac;
+    text-align: center;
+    margin-top: 1%;
+    border-radius: 10px;
+    backdrop-filter:blur(10PX);
+}
+
+.img-apresentation img {
+    width: 25vh;
+}
+
+.img-apresentation label {
+    font-family: 'Brush Script MT';
+    font-size: 4vh;
+}
+
+button {
+    background-color: #00000000;
+    border: none;
+    font-weight: bold;
+}
+
+.cards-dev {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-dev {
+    width: 30vh;
+    box-shadow: 0 0 0.5vh #333;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    margin-bottom: 2vh;
+}
+    .card-dev:hover {
+        box-shadow: 0 0 1.5vh #ff6d00;
+        transition: all 0.2s ease-in-out;
+    }
+
+.info-dev {
+    margin-top: 1vh;
+    box-shadow: 0 0 0.5vh #333;
+    border-radius: 10px;
+    padding-bottom: 1vh;
+}
+
+.info-dev:hover {
+    box-shadow: 0 0 1.5vh #ff6d00;
+    transition:all 0.2s ease-in-out;
+}
+
+    .info-dev label {
+        font-family: 'Brush Script MT';
+        font-size: 3vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .info-dev a {
+        margin-left: 1vh;
+        margin-left: 1vh;
+        border-radius: 5px;
+    }
+        .info-dev a:hover {
+            box-shadow: 0 0 1.5vh #004bff;
+            transition: all 0.2s ease-in-out;
+        }
+
+    .info-dev img {
+        width: 30px;
+    }
+
+.img-contact-dev {
+    display: flex;
+    justify-content: center;
+}
+
+.img-dev {
+    width: 200px;
+    border-radius: 50%;
+}
+    .img-dev:hover {
+        box-shadow: 0 0 1.5vh #ff6d00;
+        transition: all 0.2s ease-in-out;
+    }

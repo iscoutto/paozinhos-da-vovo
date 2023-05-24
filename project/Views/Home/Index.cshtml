@@ -1,0 +1,161 @@
+﻿@model UserViewModel;
+@{
+
+    ViewData["Title"] = "Home Page";
+}
+
+@section Styles{
+    <link href="~/css/home.css" rel="stylesheet" />
+}
+<script src="~/js/home.js"></script>
+
+<div class="tela">
+    <div class="welcome">
+        <h1>Bem vindo a Pãozinhos da Vóvó!</h1>
+    </div>
+
+    <div class="content">
+
+        <div class="acoes">
+
+            <a href="/Login/Login">
+                <div class="login">
+                    <img src="~/images/login.png" />
+                    <br />
+                    <label>Login</label>
+                </div>
+            </a>
+
+
+            <div class="sobre-link">
+                <button onclick="expandirSobre()">
+                    <img src="~/images/info.png" />
+                    <br />
+                    Sobre
+                </button>
+            </div>
+
+            <div class="contact">
+                <button onclick="expandirContato()">
+                    <img src="~/images/contact.png" />
+                    <br />
+                    Contatos
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<div id="sobre">
+
+    <div class="img-sobre">
+        <img src="~/images/about_1.jpg" />
+    </div>
+
+    <article class="sobre">
+
+        <p>
+            Bem-vindo ao Pãozinhos da Vovó, uma padaria autônoma que traz a tradição e o sabor caseiro com a inovação tecnológica, criando uma experiência única de autenticidade e praticidade.
+            Com amor, cuidado e dedicação, preparamos diariamente uma variedade de produtos fresquinhos que certamente vão encantar o seu paladar!
+        </p>
+
+        <p>
+            Na Pãozinhos da Vovó, estamos sempre buscando inovações tecnológicas para proporcionar uma experiência ainda mais conveniente e ágil aos nossos clientes.
+            Pensando nisso, implementamos um sistema de compras autônomas, permitindo que você faça suas compras sem a necessidade de um atendente.
+            Nosso processo de compras autônomas é simples e intuitivo. Aponte o QR Code do produto na camera instalada em nosso totem de atendimento e o produto será reconhecido pelo sistema.
+        </p>
+
+        <p>
+            Nossa panificadora autônoma utiliza a Internet das Coisas (IoT) para a interconexão de dispositivos e a coleta de dados em tempo real. A IoT refere-se à rede de
+            objetos físicos que são incorporados com sensores, software e conectividade para trocar informações com outros dispositivos e sistemas, permitindo o monitoramento e controle
+            remoto de processos.
+        </p>
+
+        <p>
+            Na Pãozinhos da Vovó, a inovação tecnológica das compras autônomas representa um passo importante em nossa jornada para atender às necessidades e expectativas em constante evolução dos nossos clientes.
+            Estamos entusiasmados em oferecer essa opção, proporcionando praticidade, agilidade e comodidade em cada visita à nossa padaria.
+            Delícias da vovó com um toque de modernidade para transformar seus momentos em verdadeiras celebrações gastronômicas.
+        </p>
+    </article>
+
+</div>
+
+<div id="contato">
+
+    <div class="img-contato">
+        <img src="~/images/contact.jpg" />
+    </div>
+
+    <article class="contato">
+
+        <div class="cards-dev">
+
+            <div class="card-dev">
+                <div class="img-contact-dev">
+                    <img class="img-dev" src="~/images/devs/ana.jpeg" />
+                </div>
+
+                <div class="info-dev">
+                    <label>Ana Eduarda</label>
+                        <a href="https://github.com/F3IJO"><img src="~/images/ico/github.png" />F3IJO</a>
+                    </div>
+                </div>
+
+            <div class="card-dev">
+                <div class="img-contact-dev">
+                    <img class="img-dev" src="~/images/devs/arthur.png" />
+                </div>
+
+                <div class="info-dev">
+                    <label>Arthur</label>
+                    <a href=""><img src="~/images/ico/github.png" />Arthur</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards-dev">
+            <div class="card-dev">
+                <div class="img-contact-dev">
+                    <img class="img-dev" src="~/images/devs/haron.jpeg" />
+                </div>
+
+                <div class="info-dev">
+                    <label>Haron</label>
+                    <a href="https://github.com/Haron-Terentin"><img src="~/images/ico/github.png" />Haron-Terentin</a>
+                </div>
+            </div>
+
+            <div class="card-dev">
+                <div class="img-contact-dev">
+                    <img class="img-dev" src="~/images/devs/isabella.jpeg" />
+                </div>
+
+                <div class="info-dev">
+                    <label>Isabella</label>
+                    <a href="https://github.com/iscoutto"><img src="~/images/ico/github.png" />iscoutto</a>
+                </div>
+            </div>
+        </div>
+
+    </article>
+
+</div>
+
+<div class="apresentation" id="apresentation">
+
+    <div class="img-apresentation">
+        <img src="~/images/LogoOne.png" />
+
+        <br />
+
+        <label>
+            Pãozinhos da Vóvó, <p>uma padaria autônoma que alimenta o paladar!</p>
+        </label>
+
+    </div>
+
+</div>
+

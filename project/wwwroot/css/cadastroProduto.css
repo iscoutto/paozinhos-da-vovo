@@ -1,0 +1,143 @@
+﻿form {
+    border-radius: 5px;
+}
+
+form {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: #ffffffb6 5px 5px;
+}
+
+.tittle-cadastro h1 {
+    width: 100%;
+    text-align: center;
+    color: black;
+    background-color: #fcf7f7b1;
+    border-radius: 10px;
+    margin-bottom: 5vh;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+form input:focus {
+    border: 1px solid rgb(87, 144, 247);
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="file"] {
+    padding: 20px;
+    border: 1px solid rgb(245, 163, 33);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+}
+
+#Imagem {
+    background-color: #d6a261;
+    border: 1px solid rgb(245, 163, 33);
+    border-radius: 10px;
+}
+
+    #Imagem:hover {
+        background-color: white;
+        color: #d6a261;
+    }
+
+.btn-create {
+    background-color: #d6a261;
+    color: white;
+    border: 2px solid #d6a261;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+    .btn-create:hover {
+        background-color: white;
+        color: #d6a261;
+    }
+
+.tittle-cadastro h1 {
+    width: 100%;
+    text-align: center;
+    color: black;
+    background-color: #fcf7f7b1;
+    border-radius: 10px;
+}
+
+.info-preco, .info-cat {
+    color: #717171;
+    font-size: 1.5vh;
+}
+
+#nome {
+    width: 100%;
+}
+
+#alergia, #info_nutricional {
+    min-width: 25rem;
+    height: 10rem;
+    padding: 12px;
+    margin: 10px;
+    border: 1px solid rgb(245, 163, 33);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+}
+
+    #alergia:focus, #info_nutricional:focus {
+        border: 1px solid rgb(87, 144, 247);
+    }
+
+#imgPreview {
+    width: 200px;
+    border-radius: 10px;
+    margin: 10px;
+    border: 1px solid rgb(245, 163, 33);
+    padding: 5px;
+}
+
+    #imgPreview img {
+        border-radius: 10px;
+    }
+
+.cat-preco-produto {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .cat-preco-produto div {
+        margin: 2vh;
+    }
+
+.text-area-produto {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#categoria, #unidade, #preco {
+    width: 20vh;
+    padding: 12px;
+    border: 1px solid rgb(245, 163, 33);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+}
+
+    #categoria:focus, #unidade:focus, #preco:focus {
+        border: 1px solid rgb(87, 144, 247);
+    }

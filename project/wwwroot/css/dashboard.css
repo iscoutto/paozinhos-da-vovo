@@ -1,0 +1,14 @@
+﻿b.container {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 50px;
+}
+
+#chart {
+    margin-top: 50px;
+    height: 400px;
+}

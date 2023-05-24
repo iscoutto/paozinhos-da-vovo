@@ -1,0 +1,100 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="~/css/compras.css" />
+    <link href="~/css/site.css" rel="stylesheet" />
+}
+
+<div class="titlle-compras">
+    <h1>
+        Realizar Compra
+    </h1>
+</div>
+
+<form asp-action="CompraRealizada" class="form-compras">
+
+    <div class="content">
+
+        <div class="search-product">
+
+            <input type="number" name="id" id="produto" />
+
+            <input type="button" value="Consulta" onclick="buscaProduto()">
+
+            <input type="button" value="Ler QRCode" onclick="loop()">
+
+            <input type="button" value="Adicionar ao Carrinho" onclick="adicionarCarrinho()">
+
+        </div>
+
+
+        <div class="produto">
+
+            <div class="dados-produto">
+
+                <h3>Produto</h3>
+
+                <div>
+                    <label>Nome</label>
+                    <input type="text" id="nome_produto" name="nome_produto" class="form-control disabled" readonly />
+                </div>
+
+                <div class="div-preco">
+                    <label>Preço</label>
+                    <input type="text" id="preco_produto" name="preco_produto" class="form-control disabled" readonly />
+                    <input type="text" id="unidade_produto" name="unidade_produto" class="form-control disabled" readonly />
+                </div>
+
+                <div>
+                    <label>Categoria</label>
+                    <input type="text" id="categoria_produto" class="form-control disabled" readonly />
+                </div>
+
+                <div>
+                    <label>Ingredientes</label>
+                    <input type="text" id="ingrediente_produto" class="form-control disabled" readonly />
+                </div>
+
+                <div>
+                    <label>Atenção Alérgicos</label>
+                    <input type="text" id="alergia_produto" class="form-control disabled" readonly />
+                </div>
+            </div>
+
+            <div class="carrinho-produtos">
+
+                <h3>Carrinho</h3>
+
+                <div class="dados-carrinho">
+                    <textarea class="nota-compra" id="nota">
+
+                    </textarea>
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+        
+
+    </div>
+
+    <input type="submit" value="Finalizar Compra" />
+
+</form>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+
+    // Executar enviaqrcode assim que a view for carregada
+    $(document).ready(function () {
+        apagaqrcode();
+        enviaqrcode();
+    });
+</script>

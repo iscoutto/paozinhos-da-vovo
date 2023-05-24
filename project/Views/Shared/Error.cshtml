@@ -1,0 +1,15 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Erro";
+}
+<div class="centro-msg">
+
+    <h1>Ocorreu um erro durante sua requisição!</h1>
+    <br />
+    <strong>Detalhes do erro</strong>
+    <br>
+    <code class="msg-erro">@Model.Erro</code>
+
+</div>
+
+<link rel="stylesheet" href="~/css/site.css" />

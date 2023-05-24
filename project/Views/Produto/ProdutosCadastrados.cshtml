@@ -1,0 +1,76 @@
+﻿@model List<ProdutoViewModel>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="~/css/produto.css" />
+    <link href="~/css/site.css" rel="stylesheet" />
+   }
+<main class="produtosCadastrados">
+
+    <a class="btn-back" href="/Logado/InicialLogado"><img src="~/images/ico/left.png" /></a>
+
+    <br />
+
+    <div class="titulo-pagina">
+        <h1>Listagem de Produtos</h1>
+    </div>
+
+
+    <a class="btn-newProduct" href="/Produto/CreateProduct"><img src="~/images/ico/add.png" /> Adicionar Produto</a>
+
+    <div class="content-produtos">
+
+        @foreach (var produto in Model)
+        {
+            <div class="produtos">
+                <ul>
+                    <li class="img-produto">
+                        <img class="imagem-vitrine" src="data:image/jpeg;base64,@produto.ImagemEmBase64">
+                    </li>
+
+                    <li class="info-produto">
+                        <h3>
+                            @produto.Nome
+                        </h3>
+                        <label class="info-preco">R$ @produto.Preco por @produto.Unidade</label>
+                        <br>
+                        <label class="info-preco">Categoria: @produto.Categoria</label>
+                        <figcaption>
+                            <label class="info-produto">
+                                Informações Nutricionais:
+                                <br>
+                                @produto.Info_nutricional
+                            </label>
+
+                            <label class="info-alergicos">
+                                ATENÇÃO ALÉRGICOS:
+                                <br>
+                                @produto.Alergia
+                            </label>
+
+                        </figcaption>
+                    </li>
+
+                    <div class="acoes-produto">
+                        <a href="/Produto/Editar?id=@produto.Id" class="btn-edit"><img src="~/images/ico/edit.png" /></a>
+                    </div>
+
+                    <div class="acoes-produto">
+                        <a href="javascript:apagarProduto(@produto.Id)" class="btn-trash"><img src="~/images/ico/trash.png" /></a>
+
+                    </div>
+                    
+                </ul>
+            </div>
+        }
+    </div>
+</main>
+
+<script>
+    function apagarProduto(id) {
+        if (confirm('Confirma a exclusão do registro?'))
+            location.href = 'Delete?id=' + id;
+    }</script>

@@ -1,0 +1,51 @@
+﻿@model List<ProdutoViewModel>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="~/css/produto.css" />
+    <link href="~/css/site.css" rel="stylesheet" />
+   }
+<div class="content-produtos">
+
+    @foreach (var produto in Model)
+    {
+        <div class="produtos">
+            <ul>
+                <li class="img-produto">
+                    <img class="imagem-vitrine" src="data:image/jpeg;base64,@produto.ImagemEmBase64">
+                </li>
+
+                <li class="info-produto">
+                    <h3>
+                        @produto.Nome
+                    </h3>
+                    <label class="info-preco">
+                        R$ @produto.Preco por @produto.Unidade
+                    </label>
+                    <br>
+                    <label class="info-preco">
+                        Categoria: @produto.Categoria
+                    </label>
+                    <figcaption>
+                        <label class="info-produto-nut">
+                            Informações Nutricionais:
+                            <br>
+                            @produto.Info_nutricional
+                        </label>
+                        <br>
+                        <label class="info-alergicos">
+                            ATENÇÃO ALÉRGICOS:
+                            <br>
+                            @produto.Alergia
+                        </label>
+
+                    </figcaption>
+                </li>
+
+            </ul>
+        </div>
+    }
+</div>

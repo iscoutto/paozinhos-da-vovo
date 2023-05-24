@@ -1,0 +1,67 @@
+﻿@model List<UserViewModel>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="~/css/usuariosCadastrados.css" />
+    <link href="~/css/site.css" rel="stylesheet" />
+   }
+
+
+<main class="usuariosCadastrados">
+
+    <a class="btn-back" href="/Logado/InicialLogado"><img src="~/images/ico/left.png" /></a>
+
+    <br />
+    
+    @if (ViewBag.TipoUser == 1)
+    {
+        <h1>Listagem de Administradores</h1>
+
+       
+        <a class="btn-newUser" href="/CadastroUsuarios/CreateUser?tipo=1"><img src="~/images/ico/add.png" /> Adicionar Administrador</a>
+
+    }
+    else
+    {
+        <h1>Listagem de Clientes</h1>
+          
+        <a class="btn-newUser" href="/CadastroUsuarios/CreateUser?tipo=0"><img src="~/images/ico/add.png" /> Adicionar Cliente</a>
+    }
+
+    <table class="tabela-users">
+
+        <tr class="content-acion">
+            <th>Ações</th>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Username</th>
+        </tr>
+        @foreach (var usuario in Model)
+        {
+            <tr class="content-users">
+                <td>
+                    <a href="/CadastroUsuarios/Editar?id=@usuario.Id" class="btn-edit"><img src="~/images/ico/edit.png" /></a>
+                    <a href="javascript:apagarUsuario(@usuario.Id)" class="btn-trash"><img src="~/images/ico/trash.png" /></a>
+                </td>
+                <td>@usuario.Id</td>
+                <td>@usuario.Nome</td>
+                <td>@usuario.Email</td>
+                <td>@usuario.Username</td>
+            </tr>
+        }
+
+    </table>
+</main>
+
+
+<script>
+    function apagarUsuario(id) {
+        if (confirm('Confirma a exclusão do registro?'))
+            location.href = 'Delete?id=' + id;
+    }</script>

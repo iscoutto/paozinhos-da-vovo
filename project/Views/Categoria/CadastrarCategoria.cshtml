@@ -1,0 +1,53 @@
+﻿@model CategoriaViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="~/css/cadastro.css" />
+    <link href="~/css/site.css" rel="stylesheet" />
+}
+<body class="body-cadastro">
+
+    <div class="tittle-cadastro">
+
+        @{
+            if (ViewBag.Operacao == "A")
+            {
+                <h1>
+                    Alteração de Categoria
+                </h1>
+            }
+            else
+            {
+                <h1>
+                    Criando Categoria
+                </h1>
+            }
+        }
+
+    </div>
+    <form action="Save" method="post" class="form-cadastro">
+        @{
+            if (ViewBag.Operacao == "A")
+            {
+                <input type="hidden" name="id" value="@Model.Id" />
+
+            }
+        }
+
+        <input type="hidden" name="Operacao" value="@ViewBag.Operacao" />
+
+        <div class="form-group">
+            <label for="nome">Nome*</label>
+            <input type="text" id="nome" name="nome" value="@Model.Nome">
+            <span asp-validation-for="Nome" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn-create">Salvar</button>
+    </form>
+
+</body>
+
+

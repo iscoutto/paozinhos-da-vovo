@@ -1,0 +1,70 @@
+﻿.logo-one {
+    visibility: hidden;
+}
+
+.tittle {
+    text-align: center;
+    background-color: #ffffffa9;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 1vh;
+    margin-bottom: 2vh;
+}
+.form-search {
+    border-radius: 10px;
+    padding-bottom: 5vh;
+    background-color: #ffffffa9;
+    backdrop-filter: blur(10px);
+}
+
+    .form-search label {
+        font-weight: bold;
+    }
+
+    .form-search h3 {
+        text-align: center;
+        margin-top: 1vh;
+    }
+
+.search-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+    .search-content div {
+        margin-top: 2vh;
+    }
+
+input[type="text"], input[type="number"], select {
+    border-radius: 5px;
+    height: 4vh;
+    width: 30vh;
+    border: 1px solid #ff6a00;
+}
+
+    input:focus, select:focus {
+        box-shadow: 0 0 0 0.5vh #ff6a007b;
+        transition: all 0.1s ease-in-out;
+    }
+
+.btn-aplicar {
+    margin-top: 2vh;
+    color: white;
+    border-radius: 10px;
+    background-color: #ff6a00;
+    padding: 1vh;
+    width: 15vh;
+    border: 1px solid #ff6a00;
+}
+
+    .btn-aplicar:hover {
+        background-color: #dd5d02;
+        box-shadow: 0.1vh 0.1vh 0.1vh 0.1vh #808080;
+    }
+
+    .btn-aplicar:active {
+        box-shadow: none;
+        background-color: #ff6a00;
+        transition: all 0.2s ease-in-out;
+    }

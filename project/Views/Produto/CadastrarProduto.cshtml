@@ -1,0 +1,113 @@
+﻿@model ProdutoViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="~/css/cadastroProduto.css" />
+    <link href="~/css/site.css" rel="stylesheet" />
+   }
+
+<form asp-action="Save" enctype="multipart/form-data">
+
+    <input type="hidden" name="Operacao" value="@ViewBag.Operacao" />
+
+    @{
+        if(ViewBag.Operacao == "A")
+        {
+            <input type="hidden" name="id" value="@Model.Id" />
+
+        }
+    }
+
+    <div class="tittle-cadastro">
+
+        @{
+            if (ViewBag.Operacao == "A")
+            {
+                <h1>
+                    Alteração de Produto
+                </h1>
+            }
+            else
+            {
+                <h1>
+                    Criando Produto
+                </h1>
+            }
+        }
+
+    </div>
+
+    <div class="dados-produto">
+
+        <label for="nome">Nome*</label>
+        <input type="text" id="nome" name="nome" value="@Model.Nome">
+
+    </div>
+
+    <div class="cat-preco-produto">
+
+        <div class="form-group">
+            <label for="preco">Preço*</label>
+            <label class="info-preco">Por KG ou Unidade</label>
+            <input type="number" id="preco" name="preco" value="@Model.Preco" step=".01">
+        </div>
+
+        <div class="form-group">
+            <label for="preco">Unidade*</label>
+            <label class="info-preco">KG ou Unidade</label>
+            <select id="unidade" name="unidade" required>
+                <option>Kg</option>
+                <option>Unidade</option>
+            </select>
+        </div>
+
+
+        <div class="form-group">
+            <label for="categoria">Categoria*</label>
+            <label class="info-cat">Salgado ou Doce</label>
+            <select id="categoria" name="categoria" asp-items="@ViewBag.Categorias" ></select>
+
+        </div>
+
+    </div>
+
+    <div class="text-area-produto">
+
+        <div class="form-group">
+            <label for="alergia">Cuidados Alérgicos*</label>
+            <textarea id="alergia" name="alergia" value="" required>@Model.Alergia</textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="info_nutricional">Informações Nutricionais*</label>
+            <textarea id="info_nutricional" name="info_nutricional" value="" required>@Model.Info_nutricional</textarea>
+        </div>
+
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="categoria">Imagem do Produto*</label>
+        <img id="imgPreview" src="data:image/jpeg;base64" class="img-responsive">
+        <input type="file" name="Imagem" id="Imagem" onchange="exibirImagem()" class="btn btn-secondary">
+
+    </div>
+
+    <button type="submit" class="btn-create">Salvar</button>
+
+</form>
+
+
+<script>
+    function exibirImagem() {
+        var oFReader = new FileReader();
+        oFReader.readAsDataURL(document.getElementById("Imagem").files[0]);
+        oFReader.onload = function (oFREvent) {
+            document.getElementById("imgPreview").src = oFREvent.target.result;
+        };
+    }
+</script>

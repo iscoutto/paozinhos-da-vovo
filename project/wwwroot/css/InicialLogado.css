@@ -1,0 +1,92 @@
+﻿.welcome {
+    margin: 0;
+    width: 100%;
+    min-height: 15vh;
+    background-color: #fcf7f7b1;
+    border-radius: 10px;
+}
+
+    .welcome h1 {
+        text-align: center;
+        padding-top: 5vh;
+    }
+
+.content-adm {
+    margin-top: 10px;
+    background-color: #fcf7f7b1;
+    border-radius: 10px;
+}
+
+    .content-adm h1 {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+.acoes {
+    display: flex;
+    height: 20rem;
+    gap: 1rem;
+    padding-left: 20px;
+}
+
+    .acoes a {
+        display: flex;
+        height: 20rem;
+        gap: 1rem;
+        padding-left: 20px;
+    }
+
+    .acoes > a {
+        flex: 1;
+        border-radius: 1rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+    }
+
+    .acoes > .addUser:hover, .acoes > .addAdm:hover, .acoes > .addProduct:hover, .acoes > .addCategory:hover, .search:hover, .compra:hover {
+        flex: 2;
+        background-color: #fcf7f7b1;
+    }
+
+    .acoes > .logout:hover {
+        flex:1;
+        background-color: #fc3b3b;
+        margin-left:5%;
+        margin-right:5%;
+    }
+
+.addUser {
+    background-image: url(../images/ico/AddUser.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+.addAdm {
+    background-image: url(../images/ico/AddAdm.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+.addProduct {
+    background-image: url(../images/ico/AddProduct.png);
+    background-size: 50%;
+}
+.addCategory {
+    background-image: url(../images/ico/category.png);
+    background-size: 50%;
+}
+.compra {
+    background-image: url(../images/ico/Compra.png);
+    background-size: 50%;
+}
+
+.search {
+    background-image: url(../images/ico/SearchProduct.png);
+    background-size: 50%;
+}
+.logout {
+    background-image: url(../images/ico/Logout.png);
+    background-size: 20%;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,51 @@
+﻿@model List<CategoriaViewModel>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="~/css/usuariosCadastrados.css" />
+    <link href="~/css/site.css" rel="stylesheet" />
+   }
+
+<main class="usuariosCadastrados">
+
+    <a class="btn-back" href="/Logado/InicialLogado"><img src="~/images/ico/left.png" /></a>
+
+    <br />
+
+        <h1>Listagem de Categorias</h1>
+
+
+        <a class="btn-newUser" href="/Categoria/CreateCategoria"><img src="~/images/ico/add.png" /> Adicionar Categoria</a>
+
+
+    <table class="tabela-users">
+
+        <tr class="content-acion">
+            <th>Ações</th>
+            <th>ID</th>
+            <th>Categoria</th>
+        </tr>
+        @foreach (var categoria in Model)
+        {
+            <tr class="content-users">
+                <td>
+                    <a href="/Categoria/Editar?id=@categoria.Id" class="btn-edit"><img src="~/images/ico/edit.png" /></a>
+                    <a href="javascript:apagarCategoria(@categoria.Id)" class="btn-trash"><img src="~/images/ico/trash.png" /></a>
+                </td>
+                <td>@categoria.Id</td>
+                <td>@categoria.Nome</td>
+            </tr>
+        }
+
+    </table>
+</main>
+
+
+<script>
+    function apagarCategoria(id) {
+        if (confirm('Confirma a exclusão do registro?'))
+            location.href = 'Delete?id=' + id;
+    }</script>

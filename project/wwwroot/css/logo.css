@@ -1,0 +1,18 @@
+﻿.logo-one {
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+
+.logo-one a{
+    width:100%;
+}
+
+.logo-one img{
+    width: 235px;
+    border-radius: 10px;
+}
+
+    .logo-one img:hover {
+        background-color: #fcf7f7b1;
+    }

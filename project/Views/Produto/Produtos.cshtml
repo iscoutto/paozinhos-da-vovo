@@ -1,0 +1,71 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@section Styles{
+    <link href="~/css/allProdutos.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/css/produto.css" />
+}
+<main>
+    <div class="tittle">
+        <h1>Produtos</h1>
+    </div>
+
+    <fieldset id="areaFiltro" class="form-search">
+
+        <h3>Consulta avançada de Produtos</h3>
+
+        <div class="search-content">
+
+            <div class="search-info">
+                <div class="searh-nome">
+                    <label>Nome do Produto</label>
+                    <br />
+                    <input type="text" id="nome" />
+                </div>
+
+                <div class="search-category">
+                    <label>Categoria do Produto</label>
+                    <br />
+                    <select id="categoria" asp-items="@ViewBag.Categorias"></select>
+                </div>
+            </div>
+
+            <div class="search-price">
+
+                <div class="seach-unit">
+                    <label>Kg ou Unidade</label>
+                    <br />
+                    <select id="unidade">
+                        <option>TODAS</option>
+                        <option>Kg</option>
+                        <option>Unidade</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="search-allergy">
+                <div class="search-allergy">
+                    <label>Alergia</label>
+                    <br />
+                    <input type="text" id="alergia" />
+                </div>
+
+                <div class="input-aplicar">
+                    <input type="button" id="btnFiltro" class="btn-aplicar" value="Aplicar"
+                           onclick="aplicaFiltroConsultaAvancada()" />
+                </div>
+            </div>
+
+        </div>
+
+    </fieldset>
+
+    <div id="resultadoConsulta">
+    </div>
+</main>
+
+<script src="~/js/allprodutos.js"></script>

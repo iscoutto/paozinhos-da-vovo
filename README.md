@@ -31,7 +31,7 @@ For more detailed information and screenshots of the main screens, please refer 
 
 ## Postman collection
 
-To use the prototype, a [Postman collection](/postman/) was used that performs http requests to communicate with [Helix Sandbox](https://github.com/Helix-Platform/Sandbox-NG).
+To use the prototype, a [Postman collection](/postman/postman.md) was used that performs http requests to communicate with [Helix Sandbox](https://github.com/Helix-Platform/Sandbox-NG).
 
 ## ESP32-CAM
 

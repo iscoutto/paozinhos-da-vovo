@@ -1,6 +1,6 @@
 # Pãozinhos da Vovó - Autonomous Bakery Project
 
-![Pãozinhos da Vovó Logo](/images/vovo_logo.png) 
+![Pãozinhos da Vovó](/images/header.png) 
 
 Welcome to the "Pãozinhos da Vovó" project! Here you will find all the details and resources related to the prototype of this innovative autonomous bakery, developed as part of an interdisciplinary project during the fifth semester of the Computer Engineering course.
 

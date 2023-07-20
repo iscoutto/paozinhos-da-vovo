@@ -35,7 +35,7 @@ To use the prototype, a [Postman collection](/postman/postman.md) was used that 
 
 ## ESP32-CAM
 
-The ESP32-cam was configured using the C language. Access the [configuration code](/esp32cam/) present in this repository.
+The ESP32-cam was configured using the C language. 
 
 ## Contributors
 
@@ -49,7 +49,3 @@ This project was a collaborative effort, with contributions and dedication from 
 ## Contact
 
 For more information about the project or any inquiries, feel free to contact any of the mentioned contributors above. 
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
